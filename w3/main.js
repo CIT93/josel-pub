@@ -1,4 +1,17 @@
- function determineHouseHoldPts(numberInHousehold) { numberInHousehold =5
+function determineHouseSizePts(size) {
+  if (size === "large") {
+    cardonFootprintPoints = cardonFootprintPoints + 10;
+  } else if (size === "medium") {
+    cardonFootprintPoints = cardonFootprintPoints + 7;
+  } else if (size === "small") {
+    cardonFootprintPoints = cardonFootprintPoints + 4;
+  } else if (size === "apt") {
+    cardonFootprintPoints = cardonFootprintPoints + 2;
+      }
+ }
+ 
+ 
+  function determineHouseHoldPts(numberInHousehold) {
    console.log("Inside the funtion");
  if (numberInHousehold === 1) {
    cardonFootprintPoints = cardonFootprintPoints + 14;
@@ -18,30 +31,9 @@
 console.log('Based on the number of members in the household of ${numberInHousehold} the points would be ${cardonFootprintPoints}.'); 
  }
 
-let cardonFootprintPoints = 0;
-const numberInHousehold = 3;
+ let cardonFootprintPoints = 0
 
 // global scope
 
-determineHouseHoldPts(3)
-determineHouseHoldPts (4)
-
-
-
-function determineHouseSizePts(size) {
-if (size === "large") {
-  cardonFootprintPoints = cardonFootprintPoints + 10;
-} else if (size === "medium") {
-  cardonFootprintPoints = cardonFootprintPoints + 7;
-} else if (size === "small") {
-  cardonFootprintPoints = cardonFootprintPoints + 4;
-} else if (size === "apt") {
-  cardonFootprintPoints = cardonFootprintPoints + 2;
-    }
-  console.log('Based on the size of home ${Size} the points would be ${cardonFootprintPoints}.');
-let cardonFootprintPoints = 0; 
-}
-
-
-determineHouseSizePts (5)
-determineHouseSizePts ("apt")
+determineHouseHoldPts(5);
+determineHouseSizePts("apt"); 
